@@ -1,0 +1,4 @@
+// the configured options and settings for Tutorial
+#define Compiler_VERSION_MAJOR @Compiler_VERSION_MAJOR@
+#define Compiler_VERSION_MINOR @Compiler_VERSION_MINOR@
+#define Compiler_PROJECT_BINARY_DIR "@PROJECT_BINARY_DIR@"
