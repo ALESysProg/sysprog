@@ -15,29 +15,33 @@
 	- [ ] ?
 
 ## Verwendete Software
-Diagramme: Visual Paradigm Community Edition
-https://www.visual-paradigm.com/download/
+### Diagramme
+- Visual Paradigm Community Edition
+- https://www.visual-paradigm.com/download/
 
-IDE: CLion
-https://www.jetbrains.com/clion/
+### IDE
+- CLion
+- https://www.jetbrains.com/clion/
 
-Compiler: MingGW for windows
-http://www.mingw.org/category/wiki/download
-gcc-g++
-gcc-obj
-base
-dev-tools
-gcc-ada
-gcc-fortan
-msys-base
+### Compiler 
+- CMake (Cygwin)
+- https://www.cygwin.com/setup-x86_64.exe
+- gcc
+- g++
+- make
+- Cmake
+- gdb
 
-Compiler: CMake (Cygwin)
-https://www.cygwin.com/setup-x86_64.exe
-gcc
-g++
-make
-Cmake
-gdb
+### Compiler (Alternative)
+- MingGW for windows
+- http://www.mingw.org/category/wiki/download
+- gcc-g++
+- gcc-obj
+- base
+- dev-tools
+- gcc-ada
+- gcc-fortan
+- msys-base
 
 ## Projektbeschreibung
 
