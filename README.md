@@ -1,13 +1,18 @@
 # Compiler NoC++
 
 ## Checklist
-Scanner
-	Buffer
-	Symboltabelle
-	Automat aufstellen
-	Automat implementieren
-
-Parser ?
+- [ ] Scanner
+	- [ ] Buffer (bis 25.10.)
+		- [X] Implementierung
+		- [ ] Tests
+	- [ ] Symboltabelle (bis 01.11.)
+		- [ ] Implementierung
+		- [ ] Tests
+	- [ ] Automat
+		- [ ] Implementierung (bis 08.11.)
+		- [ ] Tests (bis 15.11.)
+- [ ] Parser
+	- [ ] ?
 
 ## Verwendete Software
 Diagramme: Visual Paradigm Community Edition
