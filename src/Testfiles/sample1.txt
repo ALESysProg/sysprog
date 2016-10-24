@@ -1,0 +1,312 @@
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
+{
+	int limit = 5;
+	int zahl = 0;
+
+	for (int i = 0; i < limit; i++) {
+		zahl = zahl * zahl;
+	}
+}
