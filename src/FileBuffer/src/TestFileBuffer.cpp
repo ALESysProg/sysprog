@@ -22,10 +22,10 @@ bool TEST_getChar() {
     }
 
     // Load Buffer Extern
-    ifstream bufferExtern = ifstream();
-    bufferExtern.open(sampleFilePath);
-    bufferExtern.read(bufferOutputExtern, 10000);
-    bufferExtern.close();
+    ifstream* bufferExtern = new ifstream();
+    bufferExtern->open(sampleFilePath);
+    bufferExtern->read(bufferOutputExtern, 10000);
+    bufferExtern->close();
 
     // Compare both buffers
     for (int i = 0; i < 10000; i++) {
