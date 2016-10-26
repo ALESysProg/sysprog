@@ -1,5 +1,14 @@
 [![Build Status](https://travis-ci.org/ALESysProg/sysprog.svg?branch=master)](https://travis-ci.org/ALESysProg/sysprog)
-# Compiler NoC++
+# NoC++ Compiler 
+## Wie kann ich mithelfen?
+1. **Forke dieses Repository.**
+2. Erstelle einen Branch für dein Feature.
+3. Committe deine Änderungen.
+4. Erstelle einen Pull Request (PR).
+5. Wenn Travis das Okay gibt, merge deinen PR ins Projekt.
+6. Sollte Travis einen Fehler melden, fixe ihn. Dafür musst du keinen neuen PR erstellen. Alle weiteren Commits auf deinem Feature Branch werden dem PR automatisch hinzugefügt.
+
+*Bitte füge nur Änderungen hinzu, die dokumentiert bzw. kommentiert sind und dem Codestyle entsprechen.*
 
 ## Checklist
 - [ ] Scanner
