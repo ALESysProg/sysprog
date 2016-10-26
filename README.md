@@ -8,6 +8,8 @@
 5. Wenn Travis das Okay gibt, merge deinen PR ins Projekt.
 6. Sollte Travis einen Fehler melden, fixe ihn. Dafür musst du keinen neuen PR erstellen. Alle weiteren Commits auf deinem Feature Branch werden dem PR automatisch hinzugefügt.
 
+Hier findest du weitere Informationen: https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+
 *Bitte füge nur Änderungen hinzu, die dokumentiert bzw. kommentiert sind und dem Codestyle entsprechen.*
 
 ## Checklist
