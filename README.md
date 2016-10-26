@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ALESysProg/sysprog.svg?branch=master)](https://travis-ci.org/ALESysProg/sysprog)
 # Compiler NoC++
 
 ## Checklist

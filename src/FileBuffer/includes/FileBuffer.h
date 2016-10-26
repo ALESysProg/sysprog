@@ -8,16 +8,16 @@ using namespace std;
 class FileBuffer {
 private:
 
-    char *_file;        // File path
-    int _bufferSize = 0; // Buffer size
-    int _segments = 0;  // Segments count
+    char *_file;                // File path
+    int _bufferSize = 0;        // Buffer size
+    int _segments = 0;          // Segments count
 
-    char *_buffer; // buffer
-    int *_loadedSegments; // loaded segments
+    char *_buffer;              // buffer
+    int *_loadedSegments;       // loaded segments
 
-    int _fileLength = 0; //length of file
-    int _fileSegmentLength = 0;//fileLength/_segments;
-    int _fileCurrentPos = 0; //current position in file
+    int _fileLength = 0;        // length of file
+    int _fileSegmentLength = 0; // fileLength/_segments;
+    int _fileCurrentPos = 0;    // current position in file
 
     /**
      * Get the length of the file from the given file stream.
@@ -45,6 +45,7 @@ private:
 
     /**
      * Loads the segment if not yet loaded
+     *
      * @param segment segment from file to load
      * @param loadToPosition target position in the array
      */
@@ -60,7 +61,7 @@ private:
 
 public:
     /**
-     * Creates a buffer
+     * Creates a buffer.
      *
      * @param file File to buffer
      * @param size buffer size
@@ -69,14 +70,29 @@ public:
      */
     FileBuffer(char *file, int size = 500, int segments = 2);
 
+    /**
+     * @return The current position in the source file.
+     */
     int getPosition();
 
+    /**
+     * @return Moves the position to the next character and returns it.
+     */
     char getChar();
 
+    /**
+     * @return Moves the position to the last character and returns it.
+     */
     char ungetChar();
 
+    /**
+     * @return True if the last character has been returned, else False.
+     */
     bool isEnd();
 
+    /*
+     * Destroys the object.
+     */
     virtual ~FileBuffer();
 };
 
