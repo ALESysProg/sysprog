@@ -5,7 +5,7 @@
 #ifndef COMPILER_TOKEN_H
 #define COMPILER_TOKEN_H
 
-#include "TType.h"
+#include <TType.h>
 
 /**
  *

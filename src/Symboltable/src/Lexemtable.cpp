@@ -1,4 +1,5 @@
-#include "../includes/Lexemtable.h"
+#include <Lexemtable.h>
+#include <cstdio>
 
 Lexemtable::Lexemtable(int size) {
     this->size = size;

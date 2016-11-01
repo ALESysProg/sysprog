@@ -5,8 +5,7 @@
 #ifndef COMPILER_LINKEDLISTITEM_TOKEN_H
 #define COMPILER_LINKEDLISTITEM_TOKEN_H
 
-#include "Token.h"
-#include "LinkedList_Token.h"
+#include <Token.h>
 
 /**
  *
@@ -45,7 +44,7 @@ public:
      *
      * @param newNext
      */
-    LinkedListItem_Token *gettNext();
+    LinkedListItem_Token *getNext();
 
     /**
      *

@@ -1,17 +1,16 @@
-#include "../includes/LinkedListItem_Token.h"
+#include <LinkedListItem_Token.h>
 
-LinkedListItem_Token::LinkedListItem_Token(Token *value, LinkedListEntry_SymtabEntry *prev,
-                                           LinkedListEntry_SymtabEntry *next) {
+LinkedListItem_Token::LinkedListItem_Token(Token *value) {
+    this->_prev = nullptr;
+    this->_next = nullptr;
     this->_value = value;
-    this->_prev = prev;
-    this->_next = next;
 }
 
 void LinkedListItem_Token::setPrev(LinkedListItem_Token *newPrev) {
 
 }
 
-LinkedListItem_Token LinkedListItem_Token::getPrev() {
+LinkedListItem_Token *LinkedListItem_Token::getPrev() {
 
     return nullptr;
 }
@@ -20,7 +19,7 @@ void LinkedListItem_Token::setNext(LinkedListItem_Token *newNext) {
 
 }
 
-LinkedListItem_Token LinkedListItem_Token::getNext() {
+LinkedListItem_Token *LinkedListItem_Token::getNext() {
 
     return nullptr;
 }

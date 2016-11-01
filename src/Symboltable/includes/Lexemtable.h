@@ -15,7 +15,7 @@
  */
 class Lexemtable {
 private:
-    
+
     char *lexeme;
 
     /**
@@ -32,7 +32,7 @@ public:
     /**
      * @param size standard size of the lexem array
      */
-    Lexemtable(int size = 1024);
+    Lexemtable(int size);
 
     /**
      * @param position the position of the lexem to return
@@ -51,6 +51,8 @@ public:
      * @return the position
      */
     int find(char *lexem);
+
+    ~Lexemtable();
 };
 
 

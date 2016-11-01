@@ -1,4 +1,4 @@
-#include "../includes/LinkedList_Token.h"
+#include <LinkedList_Token.h>
 
 LinkedList_Token::LinkedList_Token() {
     this->_first = nullptr;
@@ -21,5 +21,3 @@ int LinkedList_Token::getLength() {
 void LinkedList_Token::add(Token *value) {
 
 }
-
-~LinkedList_Token::LinkedList_Token();

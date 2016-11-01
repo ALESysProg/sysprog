@@ -1,53 +1,53 @@
-#include "../includes/TType.h"
+#include <TType.h>
 
-static char *TTypes::toString(TType type) {
+char *TTypes::toString(TType type) {
     switch (type) {
         case TokenIdentifier:
-            return "TokenIdentifier";
+            return (char *) "TokenIdentifier";
         case TokenIntegerValue:
-            return "TokenIntegerValue";
+            return (char *) "TokenIntegerValue";
         case TokenIf:
-            return "TokenIf";
+            return (char *) "TokenIf";
         case TokenWhile:
-            return "TokenWhile";
+            return (char *) "TokenWhile";
         case TokenAddOperator:
-            return "TokenAddOperator";
+            return (char *) "TokenAddOperator";
         case TokenSubOperator:
-            return "TokenSubOperator";
+            return (char *) "TokenSubOperator";
         case TokenDivOperator:
-            return "TokenDivOperator";
+            return (char *) "TokenDivOperator";
         case TokenMulOperator:
-            return "TokenMulOperator";
+            return (char *) "TokenMulOperator";
         case TokenSmallerOperator:
-            return "TokenSmallerOperator";
+            return (char *) "TokenSmallerOperator";
         case TokenGreaterOperator:
-            return "TokenGreaterOperator";
+            return (char *) "TokenGreaterOperator";
         case TokenEqualsOperator:
-            return "TokenEqualsOperator";
+            return (char *) "TokenEqualsOperator";
         case TokenAssign:
-            return "TokenAssign";
+            return (char *) "TokenAssign";
         case TokenNot:
-            return "TokenNot";
+            return (char *) "TokenNot";
         case TokenAnd:
-            return "TokenAnd";
+            return (char *) "TokenAnd";
         case TokenOr:
-            return "TokenOr";
+            return (char *) "TokenOr";
         case TokenSemicolon:
-            return "TokenSemicolon";
+            return (char *) "TokenSemicolon";
         case TokenParanthesisOpen:
-            return "TokenParanthesisOpen";
+            return (char *) "TokenParanthesisOpen";
         case TokenParanthesisClose:
-            return "TokenParanthesisClose";
+            return (char *) "TokenParanthesisClose";
         case TokenWavyParanthesisOpen:
-            return "TokenWavyParanthesisOpen";
+            return (char *) "TokenWavyParanthesisOpen";
         case TokenWavyParanthesisClose:
-            return "TokenWavyParanthesisClose";
+            return (char *) "TokenWavyParanthesisClose";
         case TokenEdgyParanthesisOpen:
-            return "TokenEdgyParanthesisOpen";
+            return (char *) "TokenEdgyParanthesisOpen";
         case TokenEdgyParanthesisClose:
-            return "TokenEdgyParanthesisClose";
+            return (char *) "TokenEdgyParanthesisClose";
         case TokenMisteryAssign:
-            return "TokenMisteryAssign";
+            return (char *) "TokenMisteryAssign";
         case TokenError:
             return "TokenError";
         default:

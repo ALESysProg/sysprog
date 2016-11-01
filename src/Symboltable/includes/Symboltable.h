@@ -1,9 +1,9 @@
 #ifndef SYMBOLTABLE_H_
 #define SYMBOLTABLE_H_
 
-#include "Token.h"
-#include "LinkedList_Token.h"
-#include "Lexemtable.h"
+#include <Token.h>
+#include <LinkedList_Token.h>
+#include <Lexemtable.h>
 
 /**
  *
@@ -28,15 +28,15 @@ public:
      * @param type
      * @return
      */
-    Token insert(char *lexem, int column, int line, TType type);
+    Token *insert(char *lexem, int column, int line, TType type);
 
     /**
      * @param hash
      * @return
      */
-    LinkedList_Token lookup(int hash);
+    LinkedList_Token *lookup(int hash);
 
-    virtual ~Symboltable();
+    ~Symboltable();
 };
 
 #endif /* SYMBOLTABLE_H_ */

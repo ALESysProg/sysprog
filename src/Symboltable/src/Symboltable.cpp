@@ -1,21 +1,20 @@
-#include <Lexemtable.h>
-#include "../includes/Symboltable.h"
+#include <Symboltable.h>
 
 Symboltable::Symboltable() {
-    this->lexeme = new Lexemtable();
+    this->lexeme = new Lexemtable(1024);
     this->linkedListToken = new LinkedList_Token();
 }
 
-static int Symboltable::getHashForLexem(char *lexem, int line, int column) {
+int Symboltable::getHashForLexem(char *lexem, int line, int column) {
 
 }
 
-Token Symboltable::insert(char *lexem, int column, int line, TType type) {
+Token *Symboltable::insert(char *lexem, int column, int line, TType type) {
 
     return nullptr;
 }
 
-LinkedList_Token Symboltable::lookup(int hash) {
+LinkedList_Token *Symboltable::lookup(int hash) {
 
     return nullptr;
 }

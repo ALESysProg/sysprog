@@ -1,5 +1,4 @@
-#include "../includes/Token.h"
-
+#include <Token.h>
 
 Token::Token(int lexemPos, int column, int line, TType type) {
     this->lexemPos = lexemPos;
