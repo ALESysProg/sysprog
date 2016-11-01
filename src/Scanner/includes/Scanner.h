@@ -11,14 +11,20 @@
 
 class Scanner {
 public:
+    /**
+     * Scans the given source file and fills symboltable
+     *
+     * @param file source file
+     * @param symboltable the instance of symboltable
+     */
+    Scanner(char* file, Symboltable symboltable);
 
     /**
-     * Scans the given source file
-     *
-     * @param file Source file
-     * @return Token sequence
+     * @return the next token
      */
-    static void scan(char *file);
+    Token* nextToken();
+
+    ~Scanner();
 };
 
 #endif /* SCANNER_H_ */
