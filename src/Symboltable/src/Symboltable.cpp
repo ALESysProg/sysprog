@@ -1,32 +1,26 @@
-/*
- * Symboltable.cpp
- *
- *  Created on: Sep 26, 2012
- *      Author: knad0001
- */
-
 #include <Lexemtable.h>
 #include "../includes/Symboltable.h"
 
 Symboltable::Symboltable() {
-    lexeme = new Lexemtable();
-
-    // TODO Auto-generated constructor stub
-
+    this->lexeme = new Lexemtable();
+    this->linkedListToken = new LinkedList_Token();
 }
 
-static int Symboltable::getHashForLexem(char *lexem) {
+static int Symboltable::getHashForLexem(char *lexem, int line, int column) {
 
 }
 
 Token Symboltable::insert(char *lexem, int column, int line, TType type) {
-    lexeme.
+
+    return nullptr;
 }
 
 LinkedList_Token Symboltable::lookup(int hash) {
 
+    return nullptr;
 }
 
 Symboltable::~Symboltable() {
-    // TODO Auto-generated destructor stub
+
+
 }

@@ -8,21 +8,50 @@
 #include "Token.h"
 #include "LinkedList_Token.h"
 
+/**
+ *
+ */
 class LinkedListItem_Token {
 private:
-    LinkedListItem_Token* _prev;
-    LinkedListItem_Token* _next;
-    Token* _value;
-    LinkedList_Token* _parent;
+    LinkedListItem_Token *_prev;
+    LinkedListItem_Token *_next;
+    Token *_value;
 public:
-    LinkedListItem_Token(LinkedList_Token* parent, Token* value, LinkedListEntry_SymtabEntry* prev, LinkedListEntry_SymtabEntry* next);
+    LinkedListItem_Token(Token *value);
 
-    void setPrev(LinkedListItem_Token* newPrev);
-    void setNext(LinkedListItem_Token* newNext);
-    void setValue(Token* value);
+    /**
+     * nullable
+     *
+     * @param newPrev
+     */
+    void setPrev(LinkedListItem_Token *newPrev);
 
-    bool isLast();
-    bool isFirst();
+    /**
+     * nullable
+     *
+     * @param newPrev
+     */
+    LinkedListItem_Token *getPrev();
+
+    /**
+     * nullable
+     *
+     * @param newNext
+     */
+    void setNext(LinkedListItem_Token *newNext);
+
+    /**
+     * nullable
+     *
+     * @param newNext
+     */
+    LinkedListItem_Token *gettNext();
+
+    /**
+     *
+     * @param value
+     */
+    Token *getValue();
 
     ~LinkedListItem_Token();
 };

@@ -5,6 +5,10 @@
 #ifndef COMPILER_TTYPE_H
 #define COMPILER_TTYPE_H
 
+/**
+ * All possible Types
+ *
+ */
 enum TType {
     TokenIdentifier,
     TokenIntegerValue,
@@ -28,13 +32,16 @@ enum TType {
     TokenWavyParanthesisClose,
     TokenEdgyParanthesisOpen,
     TokenEdgyParanthesisClose,
-    TokenMisteryAssign, //TODO give better name
+    TokenMisteryAssign,
     TokenError
 };
 
+/**
+ *
+ */
 class TTypes {
 public:
-    static char* toString(TType type);
+    static char *toString(TType type);
 };
 
 #endif //COMPILER_TTYPE_H

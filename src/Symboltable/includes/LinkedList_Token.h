@@ -7,21 +7,40 @@
 
 #include "LinkedListItem_Token.h"
 
+/**
+ * Token List
+ */
 class LinkedList_Token {
 private:
-    LinkedListItem_Token* _first;
-    LinkedListItem_Token* _last;
-    int _lexemPosition;
+    LinkedListItem_Token *_first;
+    LinkedListItem_Token *_last;
     int _length = 0;
 public:
-    LinkedList_Token(int lexemPosition);
+    LinkedList_Token();
 
-    LinkedListItem_Token* getFirst();
-    LinkedListItem_Token* getLast();
+    /**
+     *
+     * @return
+     */
+    LinkedListItem_Token *getFirst();
+
+    /**
+     *
+     * @return
+     */
+    LinkedListItem_Token *getLast();
+
+    /**
+     *
+     * @return
+     */
     int getLength();
-    void add(Token* value);
 
-    char* getIdentifier();
+    /**
+     *
+     * @param value
+     */
+    void add(Token *value);
 
     ~LinkedList_Token();
 };

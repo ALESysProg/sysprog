@@ -7,17 +7,41 @@
 
 #include "TType.h"
 
+/**
+ *
+ */
 class Token {
 private:
     int line;
     int column;
+    int lexemPos;
     TType type;
 public:
-    Token(int column, int line, TType type);
+    Token(int lexemPos, int column, int line, TType type);
+
+    /**
+     *
+     * @return
+     */
     int getColumn();
+
+    /**
+     *
+     * @return
+     */
     int getLine();
+
+    /**
+     *
+     * @return
+     */
+    int getLexemPos();
+
+    /**
+     *
+     * @return
+     */
     TType getType();
-    int getHash();
 
     ~Token();
 };
