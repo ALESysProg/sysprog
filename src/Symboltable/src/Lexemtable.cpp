@@ -1,6 +1,14 @@
 #include <Lexemtable.h>
 #include <cstdio>
 
+/**
+ * calcualtes the length of an lexem
+ *
+ * @param lexem
+ * @return
+ */
+int getLength(char *lexem) ;
+
 Lexemtable::Lexemtable(int size) {
     this->size = size;
     this->lexeme = new char[size];
@@ -15,40 +23,37 @@ char *Lexemtable::get(int position) {
         throw;
     }
 
-    // TODO n lexem sollte möglich sein ddirekt zu referenzieren ohne kopie zurückzugeben
-    // Get size from lexem array
-    char size = lexeme[position];
+    char* result = (lexeme + position);
 
-    char *stringPart = new char[size];
-
-    // copy lexem to new array
-    for (int i = 0; i < size; i++) {
-        stringPart[i] = lexeme[position + i + 1];
-    }
-
-    return stringPart;
+    return result;
 }
 
 int Lexemtable::add(char *lexem) {
 
+    int length = getLength(lexem) +1;
 
-}
+    int position = this->currentSize;
 
-/**
- * calcualtes the length of an lexem
- *
- * @param lexem
- * @return
- */
-int getLength(char *lexem) {
+    if((position + length) > this->size){
+        //TODO extend array
+        printf("lexemtable ist voll");
+        throw;
+    }
+
     int pos = 0;
-
     while (lexem[pos] != '\0') {
+        this->lexeme[(position + pos)] = lexem[pos];
         pos++;
     }
 
-    return pos;
+    this->lexeme[(position + pos)] = '\0';
+
+    this->currentSize += (length + 1);
+
+    return position;
 }
+
+
 
 int Lexemtable::find(char *lexem) {
     // TODO speed up thorugh lookUp Table
@@ -72,4 +77,23 @@ int Lexemtable::find(char *lexem) {
     }
 
     return -1;
+}
+
+Lexemtable::~Lexemtable() {
+}
+
+/**
+ * calcualtes the length of an lexem
+ *
+ * @param lexem
+ * @return
+ */
+int getLength(char *lexem) {
+    int pos = 0;
+
+    while (lexem[pos] != '\0') {
+        pos++;
+    }
+
+    return pos;
 }
