@@ -3,55 +3,54 @@
 static char *TTypes::toString(TType type) {
     switch (type) {
         case TokenIdentifier:
-            return "Token";
-
+            return "TokenIdentifier";
         case TokenIntegerValue:
-            return "Token";
+            return "TokenIntegerValue";
         case TokenIf:
-            return "Token";
+            return "TokenIf";
         case TokenWhile:
-            return "Token";
+            return "TokenWhile";
         case TokenAddOperator:
-            return "Token";
+            return "TokenAddOperator";
         case TokenSubOperator:
-            return "Token";
+            return "TokenSubOperator";
         case TokenDivOperator:
-            return "Token";
+            return "TokenDivOperator";
         case TokenMulOperator:
-            return "Token";
+            return "TokenMulOperator";
         case TokenSmallerOperator:
-            return "Token";
+            return "TokenSmallerOperator";
         case TokenGreaterOperator:
-            return "Token";
+            return "TokenGreaterOperator";
         case TokenEqualsOperator:
-            return "Token";
+            return "TokenEqualsOperator";
         case TokenAssign:
-            return "Token";
+            return "TokenAssign";
         case TokenNot:
-            return "Token";
+            return "TokenNot";
         case TokenAnd:
-            return "Token";
+            return "TokenAnd";
         case TokenOr:
-            return "Token";
+            return "TokenOr";
         case TokenSemicolon:
-            return "Token";
+            return "TokenSemicolon";
         case TokenParanthesisOpen:
-            return "Token";
+            return "TokenParanthesisOpen";
         case TokenParanthesisClose:
-            return "Token";
+            return "TokenParanthesisClose";
         case TokenWavyParanthesisOpen:
-            return "Token";
+            return "TokenWavyParanthesisOpen";
         case TokenWavyParanthesisClose:
-            return "Token";
+            return "TokenWavyParanthesisClose";
         case TokenEdgyParanthesisOpen:
-            return "Token";
+            return "TokenEdgyParanthesisOpen";
         case TokenEdgyParanthesisClose:
-            return "Token";
+            return "TokenEdgyParanthesisClose";
         case TokenMisteryAssign:
-            return "Token"; //TODO give better name
+            return "TokenMisteryAssign";
         case TokenError:
-            return "Token";
+            return "TokenError";
         default:
-            return "Unknown";
+            return "Undefined";
     }
 }
