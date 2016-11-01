@@ -18,6 +18,10 @@ private:
 
     char *lexeme;
 
+    int *positions;
+
+    int positionLength;
+
     /**
      * the maximum size of the table
      */
@@ -27,6 +31,10 @@ private:
      * represents the current fill of the table
      */
     int currentSize;
+
+    bool charEquals(char *c1, char *c2) ;
+
+    int getLength(char *lexem);
 
 public:
     /**

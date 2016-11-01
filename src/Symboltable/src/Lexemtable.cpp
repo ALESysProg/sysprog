@@ -7,11 +7,12 @@
  * @param lexem
  * @return
  */
-int getLength(char *lexem) ;
 
 Lexemtable::Lexemtable(int size) {
     this->size = size;
     this->lexeme = new char[size];
+    this->positions = new int[size/2];
+    this->positionLength = 0;
     this->currentSize = 0;
 }
 
@@ -50,30 +51,27 @@ int Lexemtable::add(char *lexem) {
 
     this->currentSize += (length + 1);
 
+    // speichert alle posistions um einfacher nach vorhandenen chars zu suchen
+    this->positions[positionLength] = position;
+    this->positionLength++;
+
     return position;
 }
 
-
-
 int Lexemtable::find(char *lexem) {
-    // TODO speed up thorugh lookUp Table
-    int length = getLength(lexem);
 
-    int position = 0;
-    int acceptedChars = 0;
-    for (int i = 0; i < size; i += lexem[i] + 1) {
+    int a = 0;
 
-        if (lexem[position] != length) {
-            continue;
+    while(a < this->positionLength){
+
+        int pos = this->positions[a];
+
+        // lexeme + pos ergibt das Wort
+        if(charEquals((lexeme + pos), lexem)) {
+            return pos;
         }
 
-        for (int j = 0; j < length; j++) {
-            if (lexem[j] != lexeme[position + j]) {
-
-            }
-        }
-
-
+        a++;
     }
 
     return -1;
@@ -88,7 +86,7 @@ Lexemtable::~Lexemtable() {
  * @param lexem
  * @return
  */
-int getLength(char *lexem) {
+int Lexemtable::getLength(char *lexem) {
     int pos = 0;
 
     while (lexem[pos] != '\0') {
@@ -96,4 +94,20 @@ int getLength(char *lexem) {
     }
 
     return pos;
+}
+
+bool Lexemtable::charEquals(char *c1, char *c2) {
+
+    int pos = 0;
+
+    while(c1[pos] != '\0'){
+
+        if(c1[pos] != c2[pos]){
+            return false;
+        }
+
+        pos++;
+    }
+
+    return true;
 }

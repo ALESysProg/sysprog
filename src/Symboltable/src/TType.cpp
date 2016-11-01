@@ -49,8 +49,8 @@ char *TTypes::toString(TType type) {
         case TokenMisteryAssign:
             return (char *) "TokenMisteryAssign";
         case TokenError:
-            return "TokenError";
+            return (char *) "TokenError";
         default:
-            return "Undefined";
+            return (char *) "Undefined";
     }
 }
