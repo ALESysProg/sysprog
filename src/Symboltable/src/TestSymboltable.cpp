@@ -8,14 +8,17 @@
 
 //LexemTable Test
 bool testLexemTableAddAndGet();
-bool testLexemTableFind() ;
+
+bool testLexemTableFind();
 
 //HildsMethoden
-bool charEquals(char *c1, char *c2) ;
+bool charEquals(char *c1, char *c2);
 
 bool testToken();
 
 bool testTType();
+
+bool testLinkedListToken() ;
 
 int main(int argc, char **argv) {
 
@@ -67,9 +70,16 @@ int main(int argc, char **argv) {
         fail++;
     }
 
+    printf("TEST LinkedListToken \n\n");
 
-
-    LinkedList_Token *list = new LinkedList_Token();
+    printf("\ttest testLinkedListToken \n");
+    if (testLinkedListToken()) {
+        printf("\t\tSUCCESS\n\n");
+        sucess++;
+    } else {
+        printf("\t\tFAILED\n\n");
+        fail++;
+    }
 
     Symboltable *symboltable;
 
@@ -141,23 +151,23 @@ bool testLexemTableFind() {
     return position == position2;
 }
 
-bool testToken(){
+bool testToken() {
 
-    Token *token = new Token(1,2,3,TokenAnd);
+    Token *token = new Token(1, 2, 3, TokenAnd);
 
-    if(token->getLine() != 3){
+    if (token->getLine() != 3) {
         return false;
     }
 
-    if(token->getColumn() != 2){
+    if (token->getColumn() != 2) {
         return false;
     }
 
-    if(token->getLexemPos() != 1){
+    if (token->getLexemPos() != 1) {
         return false;
     }
 
-    if(token->getType() != TokenAnd){
+    if (token->getType() != TokenAnd) {
         return false;
     }
 
@@ -167,7 +177,25 @@ bool testToken(){
 
 }
 
-bool testTType(){
+bool testLinkedListToken() {
+
+    LinkedList_Token *list = new LinkedList_Token();
+
+    Token *t1 = new Token(1, 2, 3, TokenAnd);
+    Token *t2 = new Token(2, 3, 4, TokenAddOperator);
+    Token *t3 = new Token(5, 6, 7, TokenEdgyParanthesisClose);
+
+    list->add(t1);
+    list->add(t2);
+    list->add(t3);
+
+    LinkedListItem_Token *item1 = list->getIterator();
+
+    return (item1->getValue()->equals(t1)) && item1->getNext()->getValue()->equals(t2) && list->getLast()->equals(t3) && (list->getLength() == 3);
+
+}
+
+bool testTType() {
 
     char *test = (char *) "TokenError";
 
@@ -182,9 +210,9 @@ bool charEquals(char *c1, char *c2) {
 
     int pos = 0;
 
-    while(c1[pos] != '\0'){
+    while (c1[pos] != '\0') {
 
-        if(c1[pos] != c2[pos]){
+        if (c1[pos] != c2[pos]) {
             return false;
         }
 

@@ -43,6 +43,8 @@ public:
      */
     TType getType();
 
+    bool equals(Token* token);
+
     ~Token();
 };
 

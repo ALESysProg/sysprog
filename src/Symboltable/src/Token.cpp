@@ -47,6 +47,12 @@ TType Token::getType() {
     return this->type;
 }
 
+
+bool Token::equals(Token* token) {
+    return (this->column == token->getColumn()) && (this->line == token->getLine()) && (this->lexemPos == token->getLexemPos()) && (this->type == token->getType());
+}
+
+
 Token::~Token() {
 
 }

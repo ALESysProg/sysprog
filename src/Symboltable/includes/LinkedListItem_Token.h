@@ -12,9 +12,9 @@
  */
 class LinkedListItem_Token {
 private:
-    LinkedListItem_Token *_prev;
-    LinkedListItem_Token *_next;
-    Token *_value;
+    LinkedListItem_Token *prev;
+    LinkedListItem_Token *next;
+    Token *value;
 public:
     LinkedListItem_Token(Token *value);
 
@@ -51,6 +51,8 @@ public:
      * @param value
      */
     Token *getValue();
+
+    bool hasNext();
 
     ~LinkedListItem_Token();
 };

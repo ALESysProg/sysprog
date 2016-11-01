@@ -13,23 +13,31 @@
  */
 class LinkedList_Token {
 private:
-    LinkedListItem_Token *_first;
-    LinkedListItem_Token *_last;
-    int _length = 0;
+    LinkedListItem_Token *first;
+    LinkedListItem_Token *last;
+    int length = 0;
 public:
     LinkedList_Token();
 
     /**
      *
-     * @return
+     * @return last item
      */
-    LinkedListItem_Token *getFirst();
+    Token *getFirst();
 
     /**
      *
+     * @return first item
+     */
+    Token *getLast();
+
+    /**
+     *
+     * Returns an Iterator // TODO make as Interface
+     *
      * @return
      */
-    LinkedListItem_Token *getLast();
+    LinkedListItem_Token *getIterator ();
 
     /**
      *
