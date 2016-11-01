@@ -1,5 +1,13 @@
 #include <Token.h>
 
+/**
+ *
+ * @param lexemPos position of lexem //TODO may as char*
+ * @param column
+ * @param line
+ * @param type TType of Token
+ * @return
+ */
 Token::Token(int lexemPos, int column, int line, TType type) {
     this->lexemPos = lexemPos;
     this->type = type;

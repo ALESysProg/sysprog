@@ -41,7 +41,7 @@ enum TType {
  */
 class TTypes {
 public:
-    static char *toString(TType type);
+    char *toString(TType type);
 };
 
 #endif //COMPILER_TTYPE_H

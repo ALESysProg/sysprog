@@ -13,6 +13,10 @@ bool testLexemTableFind() ;
 //HildsMethoden
 bool charEquals(char *c1, char *c2) ;
 
+bool testToken();
+
+bool testTType();
+
 int main(int argc, char **argv) {
 
     printf("\nTesting Symboltable\n-----------------------------------------\n\n");
@@ -20,29 +24,49 @@ int main(int argc, char **argv) {
     int fail = 0;
     int sucess = 0;
 
-    printf("test LexemTable \n\n");
+    printf("TEST LexemTable \n\n");
 
     printf("\ttest LexemTableAddAndGet \n");
     if (testLexemTableAddAndGet()) {
-        printf("\t\tSUCCESS LexemTableAddAndGet\n\n");
+        printf("\t\tSUCCESS\n\n");
         sucess++;
     } else {
-        printf("\t\tFAILD LexemTableAddAndGet\n\n");
+        printf("\t\tFAILED\n\n");
         fail++;
     }
 
 
     printf("\ttest testLexemTableFind \n");
     if (testLexemTableFind()) {
-        printf("\t\tSUCCESS testLexemTableFind\n\n");
+        printf("\t\tSUCCESS\n\n");
         sucess++;
     } else {
-        printf("\t\tFAILD testLexemTableFind\n\n");
+        printf("\t\tFAILED\n\n");
         fail++;
     }
 
+    printf("TEST Token \n\n");
 
-    Token *t = new Token(0, 0, 0, TokenIf);
+    printf("\ttest testToken \n");
+    if (testToken()) {
+        printf("\t\tSUCCESS\n\n");
+        sucess++;
+    } else {
+        printf("\t\tFAILED\n\n");
+        fail++;
+    }
+
+    printf("TEST TType \n\n");
+
+    printf("\ttest testTType \n");
+    if (testTType()) {
+        printf("\t\tSUCCESS\n\n");
+        sucess++;
+    } else {
+        printf("\t\tFAILED\n\n");
+        fail++;
+    }
+
 
 
     LinkedList_Token *list = new LinkedList_Token();
@@ -51,7 +75,7 @@ int main(int argc, char **argv) {
 
     symboltable = new Symboltable();
 
-    printf("\nSucess: %i Faild: %i All %i \n", sucess, fail, sucess + fail);
+    printf("\nSuccess: %i Failed: %i All %i \n", sucess, fail, sucess + fail);
 
 }
 
@@ -115,6 +139,41 @@ bool testLexemTableFind() {
     delete lex;
 
     return position == position2;
+}
+
+bool testToken(){
+
+    Token *token = new Token(1,2,3,TokenAnd);
+
+    if(token->getLine() != 3){
+        return false;
+    }
+
+    if(token->getColumn() != 2){
+        return false;
+    }
+
+    if(token->getLexemPos() != 1){
+        return false;
+    }
+
+    if(token->getType() != TokenAnd){
+        return false;
+    }
+
+    delete token;
+
+    return true;
+
+}
+
+bool testTType(){
+
+    char *test = (char *) "TokenError";
+
+    TTypes *tTypes = new TTypes();
+
+    return charEquals(test, tTypes->toString(TokenError));
 }
 
 
