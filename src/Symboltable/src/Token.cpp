@@ -1,4 +1,5 @@
 #include <Token.h>
+#include <Symboltable.h>
 
 /**
  *
@@ -8,7 +9,8 @@
  * @param type TType of Token
  * @return
  */
-Token::Token(int lexemPos, int column, int line, TType type) {
+Token::Token(Symboltable* parent, int lexemPos, int column, int line, TType type) {
+    this->parent = parent;
     this->lexemPos = lexemPos;
     this->type = type;
     this->line = line;
@@ -29,6 +31,14 @@ int Token::getColumn() {
  */
 int Token::getLine() {
     return this->line;
+}
+
+/**
+ *
+ * @return
+ */
+char* Token::getLexem() {
+    return parent->getLexem(this->lexemPos);
 }
 
 /**

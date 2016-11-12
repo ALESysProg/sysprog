@@ -5,8 +5,9 @@
 #ifndef COMPILER_LINKEDLIST_TOKEN_H
 #define COMPILER_LINKEDLIST_TOKEN_H
 
-#include <Token.h>
+
 #include <LinkedListItem_Token.h>
+class Token;
 
 /**
  * Token List

@@ -8,9 +8,13 @@
 #ifndef Automat_H_
 #define Automat_H_
 
+class FileBuffer;
+
 class Automat {
+private:
+    FileBuffer* fileBuffer;
 public:
-    Automat();
+    Automat(FileBuffer* fileBuffer);
 
     virtual ~Automat();
 };

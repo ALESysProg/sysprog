@@ -5,9 +5,9 @@
 #ifndef COMPILER_TTYPE_H
 #define COMPILER_TTYPE_H
 
+
 /**
  * All possible Types
- *
  */
 enum TType {
     TokenIdentifier,
@@ -40,8 +40,10 @@ enum TType {
  *
  */
 class TTypes {
+private:
+    TTypes();
 public:
-    char *toString(TType type);
+    static char *toString(TType type);
 };
 
 #endif //COMPILER_TTYPE_H

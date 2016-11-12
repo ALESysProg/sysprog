@@ -32,8 +32,6 @@ private:
      */
     int currentSize;
 
-    bool charEquals(char *c1, char *c2) ;
-
     int getLength(char *lexem);
 
 public:
@@ -61,6 +59,22 @@ public:
     int find(char *lexem);
 
     ~Lexemtable();
+
+    static bool charEquals(char *c1, char *c2) {
+
+        int pos = 0;
+
+        while (c1[pos] != '\0') {
+
+            if (c1[pos] != c2[pos]) {
+                return false;
+            }
+
+            pos++;
+        }
+
+        return true;
+    }
 };
 
 

@@ -95,19 +95,3 @@ int Lexemtable::getLength(char *lexem) {
 
     return pos;
 }
-
-bool Lexemtable::charEquals(char *c1, char *c2) {
-
-    int pos = 0;
-
-    while(c1[pos] != '\0'){
-
-        if(c1[pos] != c2[pos]){
-            return false;
-        }
-
-        pos++;
-    }
-
-    return true;
-}

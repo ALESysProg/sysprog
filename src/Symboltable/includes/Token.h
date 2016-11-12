@@ -6,18 +6,20 @@
 #define COMPILER_TOKEN_H
 
 #include <TType.h>
+class Symboltable;
 
 /**
  *
  */
 class Token {
 private:
+    Symboltable* parent;
     int line;
     int column;
     int lexemPos;
     TType type;
 public:
-    Token(int lexemPos, int column, int line, TType type);
+    Token(Symboltable* parent, int lexemPos, int column, int line, TType type);
 
     /**
      *
@@ -35,6 +37,8 @@ public:
      *
      * @return
      */
+    char* getLexem();
+
     int getLexemPos();
 
     /**

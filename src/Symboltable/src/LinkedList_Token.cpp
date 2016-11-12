@@ -40,3 +40,7 @@ void LinkedList_Token::add(Token *value) {
     this->last->setNext(item);
     this->last = item;
 }
+
+LinkedList_Token::~LinkedList_Token() {
+
+}

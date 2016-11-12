@@ -28,7 +28,7 @@ bool isWhitespace(char character) {
 Scanner::Scanner(char *file, Symboltable symboltable) {
     //Needs a FileBuffer and Automaton to determine types
     FileBuffer *buffer = new FileBuffer(file, 500, 2);
-    Automat* automat = new Automat();
+    Automat* automat = new Automat(buffer);
 
     char singleWordBuffer[256];
     int length = 0;

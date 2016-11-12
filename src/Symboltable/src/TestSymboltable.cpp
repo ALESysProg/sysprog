@@ -1,93 +1,113 @@
 #include <Symboltable.h>
-#include <Token.h>
-#include <TType.h>
-#include <LinkedList_Token.h>
-#include <LinkedListItem_Token.h>
-#include <Lexemtable.h>
-#include <cstdio>
+#include <iostream>
 
 //LexemTable Test
 bool testLexemTableAddAndGet();
 
 bool testLexemTableFind();
 
-//HildsMethoden
-bool charEquals(char *c1, char *c2);
-
 bool testToken();
 
 bool testTType();
 
-bool testLinkedListToken() ;
+bool testLinkedListToken();
+
+int fail = 0;
+int sucess = 0;
+
+void test(bool success);
+
+bool testSymboltable();
 
 int main(int argc, char **argv) {
 
     printf("\nTesting Symboltable\n-----------------------------------------\n\n");
 
-    int fail = 0;
-    int sucess = 0;
 
     printf("TEST LexemTable \n\n");
 
     printf("\ttest LexemTableAddAndGet \n");
-    if (testLexemTableAddAndGet()) {
-        printf("\t\tSUCCESS\n\n");
-        sucess++;
-    } else {
-        printf("\t\tFAILED\n\n");
-        fail++;
-    }
+    test(testLexemTableAddAndGet());
 
 
     printf("\ttest testLexemTableFind \n");
-    if (testLexemTableFind()) {
-        printf("\t\tSUCCESS\n\n");
-        sucess++;
-    } else {
-        printf("\t\tFAILED\n\n");
-        fail++;
-    }
+    test(testLexemTableFind());
 
     printf("TEST Token \n\n");
 
     printf("\ttest testToken \n");
-    if (testToken()) {
-        printf("\t\tSUCCESS\n\n");
-        sucess++;
-    } else {
-        printf("\t\tFAILED\n\n");
-        fail++;
-    }
+    test(testToken());
 
     printf("TEST TType \n\n");
 
     printf("\ttest testTType \n");
-    if (testTType()) {
-        printf("\t\tSUCCESS\n\n");
-        sucess++;
-    } else {
-        printf("\t\tFAILED\n\n");
-        fail++;
-    }
+    test(testTType());
 
     printf("TEST LinkedListToken \n\n");
 
     printf("\ttest testLinkedListToken \n");
-    if (testLinkedListToken()) {
+    test(testLinkedListToken());
+
+    printf("TEST Symboltable \n\n");
+
+    printf("\ttest testSymboltable \n");
+    test(testSymboltable());
+
+
+    printf("\nSuccess: %i Failed: %i All %i \n", sucess, fail, sucess + fail);
+
+}
+
+bool testSymboltable() {
+    char *lexem0 = (char *) "test";
+    char *lexem1 = (char *) "test2";
+    char *lexem2 = (char *) "test55";
+    char *lexem3 = (char *) "blablabla";
+    char *lexem4 = (char *) "test";
+
+
+    Symboltable *symboltable = new Symboltable();
+    symboltable->
+            insert(lexem0,
+                   0, 0, TokenIdentifier);
+    symboltable->
+            insert(lexem1,
+                   0, 1, TokenIdentifier);
+    symboltable->
+            insert(lexem2,
+                   15, 0, TokenIdentifier);
+    symboltable->
+            insert(lexem3,
+                   3, 17, TokenIdentifier);
+    symboltable->
+            insert(lexem4,
+                   15, 17, TokenIdentifier);
+
+
+    Token *token0 = symboltable->lookup(lexem0);
+    Token *token1 = symboltable->lookup(lexem1);
+    Token *token2 = symboltable->lookup(lexem2);
+    Token *token3 = symboltable->lookup(lexem3);
+    Token *token4 = symboltable->lookup(lexem4);
+
+
+    return Lexemtable::charEquals(lexem0, token0->getLexem())
+           && Lexemtable::charEquals(lexem1, token1->getLexem())
+           && Lexemtable::charEquals(lexem2, token2->getLexem())
+           && Lexemtable::charEquals(lexem3, token3->getLexem())
+           && Lexemtable::charEquals(lexem4, token4->getLexem());
+}
+
+void test(bool success) {
+    if (success) {
         printf("\t\tSUCCESS\n\n");
         sucess++;
     } else {
         printf("\t\tFAILED\n\n");
         fail++;
     }
-
-    Symboltable *symboltable;
-
-    symboltable = new Symboltable();
-
-    printf("\nSuccess: %i Failed: %i All %i \n", sucess, fail, sucess + fail);
-
 }
+
 
 
 bool testLexemTableAddAndGet() {
@@ -107,17 +127,17 @@ bool testLexemTableAddAndGet() {
 
     char *testLex = lex->get(position1);
 
-    if (!charEquals(lexem1, testLex)) {
+    if (!Lexemtable::charEquals(lexem1, testLex)) {
         return false;
     }
     testLex = lex->get(position2);
 
-    if (!charEquals(lexem2, testLex)) {
+    if (!Lexemtable::charEquals(lexem2, testLex)) {
         return false;
     }
     testLex = lex->get(position3);
 
-    if (!charEquals(lexem3, testLex)) {
+    if (!Lexemtable::charEquals(lexem3, testLex)) {
         return false;
     }
 
@@ -125,7 +145,7 @@ bool testLexemTableAddAndGet() {
 
     delete lex;
 
-    return charEquals(lexem4, testLex);
+    return Lexemtable::charEquals(lexem4, testLex);
 
 }
 
@@ -152,8 +172,8 @@ bool testLexemTableFind() {
 }
 
 bool testToken() {
-
-    Token *token = new Token(1, 2, 3, TokenAnd);
+    Symboltable* symboltable = new Symboltable();
+    Token *token = new Token(symboltable, 1, 2, 3, TokenAnd);
 
     if (token->getLine() != 3) {
         return false;
@@ -178,12 +198,12 @@ bool testToken() {
 }
 
 bool testLinkedListToken() {
-
+    Symboltable *symboltable = new Symboltable();
     LinkedList_Token *list = new LinkedList_Token();
 
-    Token *t1 = new Token(1, 2, 3, TokenAnd);
-    Token *t2 = new Token(2, 3, 4, TokenAddOperator);
-    Token *t3 = new Token(5, 6, 7, TokenEdgyParanthesisClose);
+    Token *t1 = new Token(symboltable, 1, 2, 3, TokenAnd);
+    Token *t2 = new Token(symboltable, 2, 3, 4, TokenAddOperator);
+    Token *t3 = new Token(symboltable, 5, 6, 7, TokenEdgyParanthesisClose);
 
     list->add(t1);
     list->add(t2);
@@ -191,7 +211,8 @@ bool testLinkedListToken() {
 
     LinkedListItem_Token *item1 = list->getIterator();
 
-    return (item1->getValue()->equals(t1)) && item1->getNext()->getValue()->equals(t2) && list->getLast()->equals(t3) && (list->getLength() == 3);
+    return (item1->getValue()->equals(t1)) && item1->getNext()->getValue()->equals(t2) && list->getLast()->equals(t3) &&
+           (list->getLength() == 3);
 
 }
 
@@ -199,25 +220,5 @@ bool testTType() {
 
     char *test = (char *) "TokenError";
 
-    TTypes *tTypes = new TTypes();
-
-    return charEquals(test, tTypes->toString(TokenError));
-}
-
-
-/** UTILS **/
-bool charEquals(char *c1, char *c2) {
-
-    int pos = 0;
-
-    while (c1[pos] != '\0') {
-
-        if (c1[pos] != c2[pos]) {
-            return false;
-        }
-
-        pos++;
-    }
-
-    return true;
+    return Lexemtable::charEquals(test, TTypes::toString(TokenError));
 }

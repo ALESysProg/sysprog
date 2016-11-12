@@ -6,8 +6,8 @@
 #include "../includes/Automat.h"
 
 
-Automat::Automat() {
-    // TODO Auto-generated constructor stub
+Automat::Automat(FileBuffer* fileBuffer) {
+    this->fileBuffer = fileBuffer;
 
 }
 
